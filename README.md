@@ -1,3 +1,11 @@
+# Environments variables
+REACT_APP_BASE_NAME=/
+REACT_APP_SWAPI_URL=https://www.swapi.tech/api/
+REACT_APP_VISUAL_GUIDE=https://starwars-visualguide.com/assets/img/
+REACT_APP_NOTFOUND_IMG=https://starwars-visualguide.com/assets/img/placeholder.jpg
+
+
+
 # WebApp boilerplate with React JS
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
