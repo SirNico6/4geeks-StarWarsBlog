@@ -1,3 +1,29 @@
-/* 
-    General Styles
-*/
+body {
+    background-image: url('https://images.unsplash.com/photo-1569470451072-68314f596aec?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+.nav-link.active {
+    color: black
+}
+
+.nav-link:hover {
+    color: white
+}
