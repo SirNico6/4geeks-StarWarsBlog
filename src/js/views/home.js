@@ -13,10 +13,12 @@ export const Home = () => {
 
 	if (!store.films) {
 		return (
-			<div class="spinner-border text-light" role="status">
-				<span class="visually-hidden">Loading...</span>
+			<div className="d-flex justify-content-center">
+				<div className="spinner-border text-light" role="status">
+					<span className="visually-hidden">Loading...</span>
+				</div>
 			</div>
-		)
+		);
 	}
 
 	return (
