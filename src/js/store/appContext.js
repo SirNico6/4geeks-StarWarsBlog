@@ -22,7 +22,7 @@ const injectContext = PassedComponent => {
 		);
 
 		const loadData = async () => {
-			state.actions.loadFavourites();
+			state.actions.loadFavourites()
 			state.actions.getFilms();
 			state.actions.getPeople();
 			state.actions.getPlanets();

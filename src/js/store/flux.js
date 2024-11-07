@@ -65,7 +65,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getFilms: async (id = "") => {
 				const savedFilms = localStorage.getItem("films");
-				if (savedFilms != "undefined") {
+				if (!savedFilms) {
 					const films = JSON.parse(savedFilms)
 					setStore({ films });
 					return
@@ -87,7 +87,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getPeople: async (id = "") => {
 				const savedPeople = localStorage.getItem("people");
-				if (savedPeople != "undefined") {
+				if (!savedPeople) {
 					const people = JSON.parse(savedPeople);
 					setStore({ people });
 					return
@@ -109,7 +109,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getPlanets: async (id = "") => {
 				const savedPlanets = localStorage.getItem("planets");
-				if (savedPlanets != "undefined") {
+				if (!savedPlanets) {
 					const planets = JSON.parse(savedPlanets);
 					setStore({ planets: planets });
 					return
@@ -131,7 +131,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getSpecies: async (id = "") => {
 				const savedSpecies = localStorage.getItem("species");
-				if (savedSpecies != "undefined") {
+				if (!savedSpecies) {
 					const species = JSON.parse(savedSpecies);
 					setStore({ species });
 					return
@@ -153,7 +153,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getStarShips: async (id = "") => {
 				const savedStarships = localStorage.getItem("starships");
-				if (savedStarships != "undefined") {
+				if (!savedStarships) {
 					const starShips = JSON.parse(savedStarships);
 					setStore({ starShips });
 					return
@@ -176,7 +176,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getVehicles: async (id = "") => {
 				const savedVehicles = localStorage.getItem("vehicles");
-				if (savedVehicles != "undefined") {
+				if (!savedVehicles) {
 					const vehicles = JSON.parse(savedVehicles);
 					setStore({ vehicles });
 					return
