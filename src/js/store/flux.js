@@ -64,7 +64,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			getFilms: async (id = "") => {
-				const savedFilms = localStorage.getItem("films");
+				let savedFilms = localStorage.getItem("films");
+				if (savedFilms == null || savedFilms == "undefined") {
+					savedFilms = [];
+				}
+
 				if (!savedFilms) {
 					const films = JSON.parse(savedFilms)
 					setStore({ films });
@@ -72,6 +76,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				try {
 					const response = await fetch(process.env.REACT_APP_SWAPI_URL + "films/" + id, { method: 'GET' });
+
 					if (response.ok) {
 						const data = await response.json();
 						if (data) {
@@ -86,7 +91,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			getPeople: async (id = "") => {
-				const savedPeople = localStorage.getItem("people");
+				let savedPeople = localStorage.getItem("people");
+				if (savedPeople == null || savedPeople == "undefined") {
+					savedPeople = [];
+				}
 				if (!savedPeople) {
 					const people = JSON.parse(savedPeople);
 					setStore({ people });
@@ -108,7 +116,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			getPlanets: async (id = "") => {
-				const savedPlanets = localStorage.getItem("planets");
+				let savedPlanets = localStorage.getItem("planets");
+				if (savedPlanets == null || savedPlanets == "undefined") {
+					savedPlanets = [];
+				}
 				if (!savedPlanets) {
 					const planets = JSON.parse(savedPlanets);
 					setStore({ planets: planets });
@@ -130,7 +141,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			getSpecies: async (id = "") => {
-				const savedSpecies = localStorage.getItem("species");
+				let savedSpecies = localStorage.getItem("species");
+				if (savedSpecies == null || savedSpecies == "undefined") {
+					savedSpecies = [];
+				}
 				if (!savedSpecies) {
 					const species = JSON.parse(savedSpecies);
 					setStore({ species });
@@ -152,7 +166,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			getStarShips: async (id = "") => {
-				const savedStarships = localStorage.getItem("starships");
+				let savedStarships = localStorage.getItem("starships");
+				if (savedStarships == null || savedStarships == "undefined") {
+					savedStarships = [];
+				}
 				if (!savedStarships) {
 					const starShips = JSON.parse(savedStarships);
 					setStore({ starShips });
@@ -175,7 +192,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			getVehicles: async (id = "") => {
-				const savedVehicles = localStorage.getItem("vehicles");
+				let savedVehicles = localStorage.getItem("vehicles");
+				if (savedVehicles == null || savedVehicles == "undefined") {
+					savedVehicles = [];
+				}
 				if (!savedVehicles) {
 					const vehicles = JSON.parse(savedVehicles);
 					setStore({ vehicles });
